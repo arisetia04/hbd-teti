@@ -1,3 +1,4 @@
+
 $(window).load(function(){
 	$('.loading').fadeOut('fast');
 	$('.container').fadeIn('fast');
@@ -52,51 +53,53 @@ $('document').ready(function(){
 	});
 
 	function loopOne() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
+		var randleft = 350 * Math.random();
+		var randtop = 500 * Math.random();
+
+		console.log("LoopOne >> ", randleft);
 		$('#b1').animate({left:randleft,bottom:randtop},10000,function(){
 			loopOne();
 		});
 	}
 	function loopTwo() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
+		var randleft = 350 * Math.random();
+		var randtop = 500 * Math.random();
 		$('#b2').animate({left:randleft,bottom:randtop},10000,function(){
 			loopTwo();
 		});
 	}
 	function loopThree() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
+		var randleft = 350 * Math.random();
+		var randtop = 500 * Math.random();
 		$('#b3').animate({left:randleft,bottom:randtop},10000,function(){
 			loopThree();
 		});
 	}
 	function loopFour() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
+		var randleft = 350 * Math.random();
+		var randtop = 500 * Math.random();
 		$('#b4').animate({left:randleft,bottom:randtop},10000,function(){
 			loopFour();
 		});
 	}
 	function loopFive() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
+		var randleft = 350 * Math.random();
+		var randtop = 500 * Math.random();
 		$('#b5').animate({left:randleft,bottom:randtop},10000,function(){
 			loopFive();
 		});
 	}
 
 	function loopSix() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
+		var randleft = 350 * Math.random();
+		var randtop = 500 * Math.random();
 		$('#b6').animate({left:randleft,bottom:randtop},10000,function(){
 			loopSix();
 		});
 	}
 	function loopSeven() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
+		var randleft = 350 * Math.random();
+		var randtop = 500 * Math.random();
 		$('#b7').animate({left:randleft,bottom:randtop},10000,function(){
 			loopSeven();
 		});
@@ -176,12 +179,14 @@ $('document').ready(function(){
 		var i;
 
 		function msgLoop (i) {
-			$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
+
+			$("p:nth-child(" + i + ")").fadeOut('slow').delay(1000).promise().done(function () {
 			i=i+1;
-			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
+				$("p:nth-child(" + i + ")").fadeIn('slow').delay(3000);
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
-					$('.cake').fadeIn('fast');
+					$('.cake').fadeIn('slow');
+					$('#story').fadeIn('slow');
 				});
 				
 			}
